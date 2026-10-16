@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Аудиогиды — Пинщина (1941–1945)</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#fff}
+  body{font:15px/1.5 "PT Sans",Arial,sans-serif;color:#2b2b2b}
+  .wrap{max-width:960px;margin:0 auto;padding:22px 20px 70px}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 18px}
+  @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+
+  .item{text-align:center}
+  .box{
+    aspect-ratio:1/1;width:100%;
+    background:#fff;border:1px solid #e8e8e8;border-radius:18px;
+    box-shadow:0 1px 4px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+    position:relative;overflow:hidden;
+  }
+  .box.playing{border-color:#a9a9a9;box-shadow:0 0 0 3px rgba(0,0,0,.07), 0 8px 24px rgba(0,0,0,.08)}
+  .wmark{
+    position:absolute;left:0;right:0;top:0;bottom:0;
+    display:flex;align-items:center;justify-content:center;
+    font-size:70px;font-weight:700;color:rgba(0,0,0,.05);pointer-events:none;user-select:none
+  }
+  .pp{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:54px;height:54px;border-radius:50%;border:0;
+    background:#303030;color:#fff;font-size:17px;cursor:pointer;z-index:2;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.22);transition:background .12s, transform .12s
+  }
+  .pp:hover{transform:translate(-50%,-50%) scale(1.08);background:#111}
+  .box.playing .pp{background:#111}
+  .ic-pause{display:none}
+  .box.playing .ic-play{display:none}
+  .box.playing .ic-pause{display:inline}
+  .ctl{position:absolute;left:16px;right:16px;bottom:14px;z-index:2;display:flex;flex-direction:column;gap:6px}
+  .bar{width:100%;height:5px;border-radius:3px;background:#ededed;cursor:pointer}
+  .bar .fill{display:block;height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,#5a5a5a,#2f2f2f)}
+  .time{display:flex;justify-content:space-between;font-size:11px;color:#9a9a9a;font-variant-numeric:tabular-nums}
+
+  .cap{margin-top:10px;text-align:center;font-size:15px;font-weight:600;color:#202020;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  .item.hl .box{animation:hl 4s ease}
+  @keyframes hl{0%{box-shadow:0 0 0 4px rgba(32,32,32,.75)}100%{box-shadow:0 0 0 4px rgba(32,32,32,0)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="grid">
+    <div class="item" data-place="p-bastychi" id="p-bastychi">
+  <div class="box" data-src="assets/audio/bastychi-marko.mp3">
+    <span class="wmark">Б</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Бастычи</p>
+</div>
+<div class="item" data-place="p-bokinichi" id="p-bokinichi">
+  <div class="box" data-src="assets/audio/bokinichi-grazhina.mp3">
+    <span class="wmark">Б</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Бокиничи</p>
+</div>
+<div class="item" data-place="p-botovo" id="p-botovo">
+  <div class="box" data-src="assets/audio/botovo-dasha.mp3">
+    <span class="wmark">Б</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Ботово</p>
+</div>
+<div class="item" data-place="p-velesnica" id="p-velesnica">
+  <div class="box" data-src="assets/audio/velesnica-grechka.mp3">
+    <span class="wmark">В</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Велесница</p>
+</div>
+<div class="item" data-place="p-vulka-gorodishchenskaya" id="p-vulka-gorodishchenskaya">
+  <div class="box" data-src="assets/audio/vulka-gorodishchenskaya-zilevich.mp3">
+    <span class="wmark">В</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Вулька-Городищенская</p>
+</div>
+<div class="item" data-place="p-dobraya-volya" id="p-dobraya-volya">
+  <div class="box" data-src="assets/audio/dobraya-volya-dasha.mp3">
+    <span class="wmark">Д</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Добрая воля</p>
+</div>
+<div class="item" data-place="p-dobroslavka" id="p-dobroslavka">
+  <div class="box" data-src="assets/audio/dobroslavka-poshelyuk.mp3">
+    <span class="wmark">Д</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Доброславка</p>
+</div>
+<div class="item" data-place="p-dubnovichi" id="p-dubnovichi">
+  <div class="box" data-src="assets/audio/dubnovichi-ostrovskaya-1.mp3">
+    <span class="wmark">Д</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Дубновичи · 1</p>
+</div>
+<div class="item" data-place="p-dubnovichi">
+  <div class="box" data-src="assets/audio/dubnovichi-ostrovskaya-2.mp3">
+    <span class="wmark">Д</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Дубновичи · 2</p>
+</div>
+<div class="item" data-place="p-zhabchicy" id="p-zhabchicy">
+  <div class="box" data-src="assets/audio/zhabchicy-ivan.mp3">
+    <span class="wmark">Ж</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Жабчицы</p>
+</div>
+<div class="item" data-place="p-zholkino" id="p-zholkino">
+  <div class="box" data-src="assets/audio/zholkino-verbalovich.mp3">
+    <span class="wmark">Ж</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Жолкино</p>
+</div>
+<div class="item" data-place="p-kozlyakovichi" id="p-kozlyakovichi">
+  <div class="box" data-src="assets/audio/kozlyakovichi-feygelian.mp3">
+    <span class="wmark">К</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Козляковичи</p>
+</div>
+<div class="item" data-place="p-lasick" id="p-lasick">
+  <div class="box" data-src="assets/audio/lasick-mariya.mp3">
+    <span class="wmark">Л</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Ласицк</p>
+</div>
+<div class="item" data-place="p-lipniki" id="p-lipniki">
+  <div class="box" data-src="assets/audio/lipniki-kunickaya.mp3">
+    <span class="wmark">Л</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Липники</p>
+</div>
+<div class="item" data-place="p-logishin" id="p-logishin">
+  <div class="box" data-src="assets/audio/logishin-lobachevskiy.mp3">
+    <span class="wmark">Л</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Логишин</p>
+</div>
+<div class="item" data-place="p-lyubel-pol" id="p-lyubel-pol">
+  <div class="box" data-src="assets/audio/lyubel-pol-lemeshevskaya.mp3">
+    <span class="wmark">Л</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Любель-Поль</p>
+</div>
+<div class="item" data-place="p-malaya-plotnica" id="p-malaya-plotnica">
+  <div class="box" data-src="assets/audio/malaya-plotnica-razzhalovec.mp3">
+    <span class="wmark">М</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Малая Плотница</p>
+</div>
+<div class="item" data-place="p-molotkovichi" id="p-molotkovichi">
+  <div class="box" data-src="assets/audio/molotkovichi-morozov.mp3">
+    <span class="wmark">М</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Молотковичи</p>
+</div>
+<div class="item" data-place="p-nevel" id="p-nevel">
+  <div class="box" data-src="assets/audio/nevel-gurinovich.mp3">
+    <span class="wmark">Н</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Невель</p>
+</div>
+<div class="item" data-place="p-pinskoe-getto" id="p-pinskoe-getto">
+  <div class="box" data-src="assets/audio/pinskoe-getto-verbalovich.mp3">
+    <span class="wmark">П</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Пинское гетто · 1</p>
+</div>
+<div class="item" data-place="p-pinskoe-getto">
+  <div class="box" data-src="assets/audio/pinskoe-getto-pesker.mp3">
+    <span class="wmark">П</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Пинское гетто · 2</p>
+</div>
+<div class="item" data-place="p-pogost-zagorodskiy" id="p-pogost-zagorodskiy">
+  <div class="box" data-src="assets/audio/pogost-zagorodskiy-goldman.mp3">
+    <span class="wmark">П</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Погост-Загородский</p>
+</div>
+<div class="item" data-place="p-posenichi" id="p-posenichi">
+  <div class="box" data-src="assets/audio/posenichi-dolinko.mp3">
+    <span class="wmark">П</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Посеничи</p>
+</div>
+<div class="item" data-place="p-semencha" id="p-semencha">
+  <div class="box" data-src="assets/audio/semencha-mihail.mp3">
+    <span class="wmark">С</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Семенча</p>
+</div>
+<div class="item" data-place="p-semehovichi" id="p-semehovichi">
+  <div class="box" data-src="assets/audio/semehovichi-elena-petrovna.mp3">
+    <span class="wmark">С</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Семеховичи</p>
+</div>
+<div class="item" data-place="p-tereben" id="p-tereben">
+  <div class="box" data-src="assets/audio/tereben-kohnovich.mp3">
+    <span class="wmark">Т</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Теребень</p>
+</div>
+<div class="item" data-place="p-trushevo" id="p-trushevo">
+  <div class="box" data-src="assets/audio/trushevo-ivan.mp3">
+    <span class="wmark">Т</span>
+    <button class="pp" title="Слушать"><span class="ic ic-play">&#9654;</span><span class="ic ic-pause">&#10074;&#10074;</span></button>
+    <div class="ctl">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="time"><span class="cur">0:00</span><span class="dur">–:––</span></div>
+    </div>
+  </div>
+  <p class="cap">Трушево</p>
+</div>
+  </div>
+</div>
+
+<script>
+  const boxes = Array.prototype.slice.call(document.querySelectorAll('.box'));
+  function fmt(t){
+    if (!isFinite(t)) return '–:––';
+    t = Math.floor(t); const m = Math.floor(t / 60); const s = t % 60;
+    return m + ':' + (s < 10 ? '0' : '') + s;
+  }
+  boxes.forEach(function(box){
+    const a = new Audio(box.dataset.src);
+    a.preload = 'none';
+    box._a = a;
+    const fill = box.querySelector('.fill');
+    const cur  = box.querySelector('.cur');
+    const dur  = box.querySelector('.dur');
+    const bar  = box.querySelector('.bar');
+    const btn  = box.querySelector('.pp');
+
+    btn.addEventListener('click', function(){
+      if (box.classList.contains('playing')) { a.pause(); return; }
+      boxes.forEach(function(o){ if (o !== box){ o.classList.remove('playing'); if (o._a) o._a.pause(); } });
+      box.classList.add('playing');
+      a.play().catch(function(){ box.classList.remove('playing'); });
+    });
+
+    a.addEventListener('play',       function(){ box.classList.add('playing'); });
+    a.addEventListener('pause',      function(){ box.classList.remove('playing'); });
+    a.addEventListener('ended',      function(){ box.classList.remove('playing'); cur.textContent = '0:00'; fill.style.width = '0%'; });
+    a.addEventListener('loadedmetadata', function(){ dur.textContent = fmt(a.duration); });
+    a.addEventListener('timeupdate', function(){
+      cur.textContent = fmt(a.currentTime);
+      if (a.duration) fill.style.width = (a.currentTime / a.duration * 100) + '%';
+    });
+
+    bar.addEventListener('click', function(e){
+      const r = bar.getBoundingClientRect();
+      const p = (e.clientX - r.left) / r.width;
+      if (a.duration) a.currentTime = Math.max(0, Math.min(1, p)) * a.duration;
+    });
+  });
+
+  // Переход с карты: найти место по хэшу (#p-slug), прокрутить и подсветить.
+  // Хэш может быть в адресе самого аудиогида (отдельная страница) ИЛИ в адресе
+  // родительской страницы, в которую он встроен iframe-ом (страница WordPress) —
+  // браузер хэш во вложенный фрейм не переносит, поэтому читаем его напрямую.
+  function audioHash(){
+    var h = location.hash;
+    if (!h) {
+      try {
+        if (window.parent && window.parent !== window) h = window.parent.location.hash;
+      } catch(e){}
+    }
+    return decodeURIComponent((h || '').replace('#', ''));
+  }
+  // Прокрутить родительскую страницу к встроенному аудиогиду так, чтобы нужная
+  // карточка попала в зону видимости (на странице-родителе фрейм растянут на всю
+  // высоту, поэтому внутренней прокрутки недостаточно).
+  var parentTouched = false;
+  function revealInParent(el){
+    try {
+      if (parentTouched) return;
+      if (!window.parent || window.parent === window) return;
+      var fe = window.frameElement;
+      if (!fe) return;
+      var p = window.parent;
+      // Где карточка ПРЯМО СЕЙЧАС на экране: верх фрейма + верх карточки внутри
+      // него. Такое измерение не зависит от прокрутки самого встроенного
+      // документа, поэтому после прокрутки карточка встаёт ровно на 120 px.
+      var want = fe.getBoundingClientRect().top + el.getBoundingClientRect().top;
+      var top = (p.pageYOffset || 0) + want - 120;
+      p.scrollTo(0, top < 0 ? 0 : top);
+    } catch(e){}
+  }
+  function watchParent(el){
+    try {
+      if (!window.parent || window.parent === window) return;
+      var p = window.parent;
+      var stop = function(){ parentTouched = true; };
+      ['wheel','touchstart','keydown','mousedown'].forEach(function(ev){
+        p.addEventListener(ev, stop, {passive:true});
+        document.addEventListener(ev, stop, {passive:true});
+      });
+      // фрейм часто «дорастает» уже после первой прокрутки — повторяем
+      p.addEventListener('load', function(){ setTimeout(function(){ revealInParent(el); }, 80); });
+      p.addEventListener('resize', function(){ setTimeout(function(){ revealInParent(el); }, 80); });
+    } catch(e){}
+  }
+  function goAudioHash(){
+    var h = audioHash();
+    if (h.indexOf('p-') !== 0) return;
+    var items = document.querySelectorAll('.item[data-place="' + h + '"]');
+    if (!items.length) return;
+    var first = items[0];
+    setTimeout(function(){
+      first.scrollIntoView({behavior:'smooth', block:'center'});
+      Array.prototype.forEach.call(items, function(el){ el.classList.add('hl'); });
+      setTimeout(function(){
+        Array.prototype.forEach.call(items, function(el){ el.classList.remove('hl'); });
+      }, 4000);
+      watchParent(first);
+      // встроен iframe-ом на страницу WordPress: пересчитать высоту фрейма
+      // (на странице определена resizeAudioGuide) и прокрутить родителя к месту
+      [500, 1600, 3200].forEach(function(ms){
+        setTimeout(function(){
+          try {
+            if (window.parent && window.parent !== window && typeof window.parent.resizeAudioGuide === 'function'){
+              window.parent.resizeAudioGuide();
+            }
+          } catch(e){}
+          revealInParent(first);
+        }, ms);
+      });
+    }, 250);
+  }
+  window.addEventListener('DOMContentLoaded', function(){
+    setTimeout(goAudioHash, 150);
+  });
+  try {
+    if (window.parent && window.parent !== window) {
+      window.parent.addEventListener('hashchange', goAudioHash);
+    }
+  } catch(e){}
+</script>
+</body>
+</html>

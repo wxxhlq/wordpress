@@ -1,0 +1,1 @@
+import{C as n,P as o,S as t}from"./TruSeoWrapper.aa6ecade.js";const e=Object.freeze(Object.defineProperty({__proto__:null,Clause:n,ProminentWord:o,Sentence:t},Symbol.toStringTag,{value:"Module"}));export{e as v};

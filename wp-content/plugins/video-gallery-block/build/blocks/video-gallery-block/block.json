@@ -1,0 +1,258 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "vgb/video-gallery",
+  "title": "Video Gallery Block",
+  "description": "Create responsive video galleries with YouTube, Vimeo, albums, filters, and lightbox popups in the Gutenberg editor.",
+  "category": "widgets",
+  "keywords": [
+    "video gallery",
+    "video gallery block",
+    "video",
+    "gallery",
+    "youtube gallery",
+    "vimeo gallery",
+    "playlist",
+    "lightbox",
+    "video grid",
+    "video showcase"
+  ],
+  "textdomain": "video-gallery-block",
+  "attributes": {
+    "albums": {
+      "type": "array",
+      "default": []
+    },
+    "videos": {
+      "type": "array",
+      "default": [
+        {
+          "video": "https://files.vidstack.io/sprite-fight/720p.mp4",
+          "poster": "https://files.vidstack.io/sprite-fight/poster.webp",
+          "caption": "Sprite Fight",
+          "albs": []
+        }
+      ]
+    },
+    "columns": {
+      "type": "object",
+      "default": {
+        "desktop": 3,
+        "tablet": 2,
+        "mobile": 1
+      }
+    },
+    "columnGap": {
+      "type": "number",
+      "default": 10
+    },
+    "rowGap": {
+      "type": "number",
+      "default": 10
+    },
+    "columnGapResponsive": {
+      "type": "object",
+      "default": {
+        "desktop": 10,
+        "tablet": 10,
+        "mobile": 10
+      }
+    },
+    "rowGapResponsive": {
+      "type": "object",
+      "default": {
+        "desktop": 10,
+        "tablet": 10,
+        "mobile": 10
+      }
+    },
+    "isPopupWidthAsRatio": {
+      "type": "boolean",
+      "default": false
+    },
+    "filter": {
+      "type": "object",
+      "default": {
+        "show": true,
+        "commonLabel": "All Videos"
+      }
+    },
+    "perPage": {
+      "type": "number",
+      "default": 0
+    },
+    "loadMoreLabel": {
+      "type": "string",
+      "default": "Load More"
+    },
+    "background": {
+      "type": "object",
+      "default": {
+        "color": "#fff"
+      }
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "vertical": "10px",
+        "horizontal": "10px"
+      }
+    },
+    "border": {
+      "type": "object",
+      "default": {
+        "radius": "5px"
+      }
+    },
+    "shadow": {
+      "type": "array",
+      "default": [
+        {
+          "hOffset": "0px",
+          "vOffset": "25px",
+          "blur": "30px",
+          "spreed": "-20px",
+          "color": "#0003"
+        }
+      ]
+    },
+    "filterBtnTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 14,
+          "tablet": 14,
+          "mobile": 14
+        }
+      }
+    },
+    "filterBtnColors": {
+      "type": "object",
+      "default": {
+        "color": "#fff",
+        "bg": "#146ef5"
+      }
+    },
+    "filterBtnHoverColors": {
+      "type": "object",
+      "default": {
+        "color": "#fff",
+        "bg": "#ff7a00"
+      }
+    },
+    "playIconColors": {
+      "type": "object",
+      "default": {
+        "color": "#fff",
+        "bg": "rgba(0, 0, 0, 0.55)"
+      }
+    },
+    "playIconSize": {
+      "type": "number",
+      "default": 54
+    },
+    "playIconHoverScale": {
+      "type": "number",
+      "default": 1.08
+    },
+    "itemBorder": {
+      "type": "object",
+      "default": {}
+    },
+    "itemShadow": {
+      "type": "array",
+      "default": []
+    },
+    "itemHeight": {
+      "type": "string",
+      "default": "200px"
+    },
+    "styles": {
+      "type": "object",
+      "default": {
+        "caption": {
+          "colors": {
+            "color": "#fff",
+            "bg": "rgba(0, 0, 0, 0.55)"
+          },
+          "typography": {
+            "fontSize": {
+              "desktop": 14,
+              "tablet": 14,
+              "mobile": 14
+            }
+          },
+          "padding": {
+            "vertical": "10px",
+            "horizontal": "10px"
+          }
+        },
+        "lightBoxCaption": {
+          "colors": {
+            "color": "#fff",
+            "bg": "#00000000"
+          },
+          "typography": {
+            "fontSize": {
+              "desktop": 14,
+              "tablet": 14,
+              "mobile": 14
+            }
+          },
+          "padding": {
+            "vertical": "10px",
+            "horizontal": "10px"
+          }
+        }
+      }
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "objectFit": "cover",
+        "showCaptionOnThumbnail": true,
+        "videoSchema": true,
+        "shortsFilter": "all",
+        "showPlayIcon": true,
+        "sortOrder": "manual",
+        "consentGate": false,
+        "gaTracking": false,
+        "rowAlign": "center"
+      }
+    },
+    "isSetup": {
+      "type": "boolean",
+      "default": false
+    },
+    "aspectRatio": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {
+      "preview": true,
+      "link": "https://www.youtube.com/watch?v=Pa5WSaRVRho"
+    }
+  },
+  "editorScript": [
+    "file:./index.js"
+  ],
+  "editorStyle": "file:./index.css",
+  "style": [
+    "file:./view.css",
+    "plyr"
+  ],
+  "render": "file:./render.php",
+  "viewScript": [
+    "file:./view.js",
+    "plyr"
+  ]
+}

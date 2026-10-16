@@ -1,0 +1,42 @@
+# Translation of Plugins - SVG Icon Block - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - SVG Icon Block - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-07-02 19:22:33+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - SVG Icon Block - Stable (latest release)\n"
+
+#: build/blocks/svg/block.json
+msgctxt "block title"
+msgid "SVG Icon"
+msgstr "SVG Иконка"
+
+#. Plugin Name of the plugin
+#: svg-icon-block.php
+msgid "SVG Icon Block"
+msgstr "SVG Icon Block"
+
+#. Author of the plugin
+#: svg-icon-block.php
+msgid "Zakaria Binsaifullah"
+msgstr "Zakaria Binsaifullah"
+
+#. Author URI of the plugin
+#: svg-icon-block.php
+msgid "https://www.makegutenblock.com"
+msgstr "https://www.makegutenblock.com"
+
+#: build/blocks/svg/block.json
+msgctxt "block description"
+msgid "Display a SVG icon"
+msgstr "Отобразить значок в формате SVG"
+
+#. Description of the plugin
+#: svg-icon-block.php
+msgid "Easily add SVG icons to your Gutenberg block editor with the SVG Icon Block."
+msgstr "С помощью блока «SVG Icon Block» вы можете легко добавлять SVG-значки в редактор блоков Gutenberg."

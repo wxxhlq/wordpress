@@ -1,0 +1,159 @@
+# Translation of Plugins - Social Sharing Block - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Social Sharing Block - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-12-04 17:34:11+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Social Sharing Block - Stable (latest release)\n"
+
+#: build/social-sharing-link/utils.php:129
+msgid "Share on Bluesky"
+msgstr "Поделитесь на Bluesky"
+
+#: build/social-sharing-link/utils.php:194
+msgid "Share on Threads"
+msgstr "Поделитесь с Нитями"
+
+#: build/social-sharing-link/utils.php:214 build/social-sharing-link/index.js:2
+msgid "Share on X"
+msgstr "Поделитесь на X"
+
+#: build/social-sharing-link/utils.php:204
+msgid "Share on Viber"
+msgstr "Поделитесь в Viber"
+
+#. Description of the plugin
+#: social-sharing-block.php
+msgid "Easily add social share icons to your website."
+msgstr "Легко добавьте значки социального обмена на свой сайт."
+
+#: build/social-sharing-link/utils.php:184
+msgid "Share on SMS"
+msgstr "Поделитесь SMS"
+
+#: build/social-sharing-link/utils.php:144
+msgid "Share on LINE"
+msgstr "Поделитесь на LINE"
+
+#: build/social-sharing-link/utils.php:139
+msgid "Share on Flipboard"
+msgstr "Поделиться на Flipboard"
+
+#: build/social-sharing/block.json
+msgctxt "block style label"
+msgid "Pill Shape"
+msgstr "Форма таблетки"
+
+#: build/social-sharing/block.json
+msgctxt "block style label"
+msgid "Logos Only"
+msgstr "Только логотипы"
+
+#: build/social-sharing/block.json
+msgctxt "block style label"
+msgid "Default"
+msgstr "По умолчанию"
+
+#: build/social-sharing/block.json
+msgctxt "block keyword"
+msgid "share"
+msgstr "поделиться"
+
+#: build/social-sharing/block.json
+msgctxt "block keyword"
+msgid "links"
+msgstr "ссылки"
+
+#: build/social-sharing/block.json
+msgctxt "block keyword"
+msgid "social"
+msgstr "соцсеть"
+
+#: build/social-sharing/block.json
+msgctxt "block keyword"
+msgid "icon"
+msgstr "значок"
+
+#: build/social-sharing/block.json
+msgctxt "block description"
+msgid "Display icons that share the current page when clicked."
+msgstr "Отображайте значки, которые при нажатии разделяют текущую страницу."
+
+#: build/social-sharing/block.json
+msgctxt "block title"
+msgid "Social Sharing"
+msgstr "Обмен в соцсетях"
+
+#: build/social-sharing-link/block.json
+msgctxt "block description"
+msgid "Display an icon that shares the current page when clicked."
+msgstr "Отобразите значок, при нажатии на который можно поделиться текущей страницей."
+
+#: build/social-sharing-link/block.json
+msgctxt "block title"
+msgid "Social Sharing Link"
+msgstr "Ссылка для социального обмена"
+
+#: build/social-sharing-link/utils.php:209
+msgid "Share on WhatsApp"
+msgstr "Поделиться в WhatsApp"
+
+#: build/social-sharing-link/utils.php:199
+msgid "Share on Tumblr"
+msgstr "Поделитесь на Tumblr"
+
+#: build/social-sharing-link/utils.php:189
+msgid "Share on Telegram"
+msgstr "Поделитесь в Telegram"
+
+#: build/social-sharing-link/utils.php:179
+msgid "Share on Skype"
+msgstr "Поделитесь в Skype"
+
+#: build/social-sharing-link/utils.php:174
+msgid "Share on Reddit"
+msgstr "Поделитесь на Reddit"
+
+#: build/social-sharing-link/utils.php:169 build/social-sharing-link/index.js:2
+msgid "Print this Page"
+msgstr "Распечатать эту страницу"
+
+#: build/social-sharing-link/utils.php:164
+msgid "Share on Pocket"
+msgstr "Поделитесь в Pocket"
+
+#: build/social-sharing-link/utils.php:159
+msgid "Share on Pinterest"
+msgstr "Поделитесь на Pinterest"
+
+#: build/social-sharing-link/utils.php:154 build/social-sharing-link/index.js:2
+msgid "Email this Page"
+msgstr "Отправьте эту страницу по электронной почте"
+
+#: build/social-sharing-link/utils.php:149
+msgid "Share on LinkedIn"
+msgstr "Поделиться в LinkedIn"
+
+#: build/social-sharing-link/utils.php:134
+msgid "Share on Facebook"
+msgstr "Поделиться в Facebook"
+
+#. Author URI of the plugin
+#: social-sharing-block.php
+msgid "https://www.nickdiego.com"
+msgstr "https://www.nickdiego.com"
+
+#. Author of the plugin
+#: social-sharing-block.php
+msgid "Nick Diego"
+msgstr "Nick Diego"
+
+#. Plugin Name of the plugin
+#: social-sharing-block.php
+msgid "Social Sharing Block"
+msgstr "Social Sharing Block"

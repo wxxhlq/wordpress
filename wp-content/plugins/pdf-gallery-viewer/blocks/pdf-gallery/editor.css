@@ -1,0 +1,46 @@
+.pdf-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.pdf-table th,
+.pdf-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    vertical-align: middle;
+}
+
+.pdf-table th {
+    background-color: #f5f5f5;
+    text-align: left;
+}
+
+/* Make the position (#) column compact */
+.pdf-table th:first-child,
+.pdf-table td:first-child{
+    width: 90px;
+}
+
+/* Filename column */
+.pdf-table code{
+    font-size: 12px;
+    opacity: 0.85;
+    word-break: break-all;
+}
+
+.pdf-table-title {
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-family: inherit;
+    width: 100%;
+    min-width: 200px;
+    cursor: text;
+    transition: box-shadow 0.2s ease;
+}
+
+.pdf-table-title:focus-within {
+    box-shadow: 0 0 0 2px #7db3da;
+    border-color: #7db3da;
+}

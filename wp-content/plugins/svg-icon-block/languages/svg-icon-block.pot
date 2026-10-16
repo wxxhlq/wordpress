@@ -1,0 +1,492 @@
+# Copyright (C) 2024 Zakaria Binsaifullah
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: SVG Icon Block 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/svg-icon-block\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-10-02T08:17:12+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: svg-icon-block\n"
+
+#. Plugin Name of the plugin
+#: svg-icon-block.php
+msgid "SVG Icon Block"
+msgstr ""
+
+#. Description of the plugin
+#: svg-icon-block.php
+msgid "Easily add SVG icons to your Gutenberg block editor with the SVG Icon Block."
+msgstr ""
+
+#. Author of the plugin
+#: svg-icon-block.php
+msgid "Zakaria Binsaifullah"
+msgstr ""
+
+#. Author URI of the plugin
+#: svg-icon-block.php
+msgid "https://www.makegutenblock.com"
+msgstr ""
+
+#: src/blocks/svg/edit.js:59
+msgid "View"
+msgstr ""
+
+#: src/blocks/svg/edit.js:59
+msgid "Edit"
+msgstr ""
+
+#: src/blocks/svg/edit.js:103
+msgid "SVG Icon"
+msgstr ""
+
+#: src/blocks/svg/edit.js:104
+msgid "Select an SVG icon from the icons library or upload your own custom SVG"
+msgstr ""
+
+#: src/blocks/svg/edit.js:108
+msgid "Icons Library"
+msgstr ""
+
+#: src/blocks/svg/edit.js:111
+#: src/controls/svg-modal/index.js:13
+msgid "Custom SVG"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:56
+msgid "General"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:58
+msgid "Show Label"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:63
+msgid "Enable Link"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:73
+#: src/blocks/svg/inspector.js:252
+msgid "Label"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:76
+msgid "Lable"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:81
+msgid "Link"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:91
+msgid "Icon Position"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:93
+#: src/constants/index.js:47
+#: src/constants/index.js:117
+#: src/controls/border-control/dimension.js:82
+#: src/controls/res-box-control/dimension.js:100
+msgid "Left"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:94
+#: src/constants/index.js:91
+#: src/constants/index.js:160
+#: src/controls/border-control/dimension.js:70
+#: src/controls/res-box-control/dimension.js:76
+msgid "Right"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:101
+msgid "Icon"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:103
+msgid "SVG Codes"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:107
+#: src/blocks/svg/inspector.js:108
+#: src/controls/svg-modal/index.js:34
+#: src/controls/svg-modal/index.js:37
+msgid "Paste your SVG code here."
+msgstr ""
+
+#: src/blocks/svg/inspector.js:115
+msgid "Wrapper"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:116
+msgid "Alignment"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:118
+#: src/blocks/svg/inspector.js:168
+msgid "Border Radius"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:119
+#: src/blocks/svg/inspector.js:169
+msgid "Padding"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:120
+msgid "Margin"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:124
+#: src/blocks/svg/inspector.js:135
+#: src/blocks/svg/inspector.js:189
+#: src/blocks/svg/inspector.js:216
+msgid "Background"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:143
+#: src/blocks/svg/inspector.js:241
+msgid "Hover Background"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:154
+#: src/blocks/svg/inspector.js:156
+msgid "Gap"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:165
+msgid "SVG"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:166
+#: src/controls/background-control/index.js:204
+msgid "Size"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:174
+#: src/blocks/svg/inspector.js:201
+#: src/blocks/svg/inspector.js:226
+msgid "Fill Color"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:179
+#: src/blocks/svg/inspector.js:206
+#: src/blocks/svg/inspector.js:231
+msgid "Stroke Color"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:184
+#: src/blocks/svg/inspector.js:211
+#: src/blocks/svg/inspector.js:236
+msgid "Path Color"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:253
+msgid "Typography"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:256
+#: src/blocks/svg/inspector.js:265
+#: src/controls/background-control/index.js:152
+msgid "Color"
+msgstr ""
+
+#: src/blocks/svg/inspector.js:272
+msgid "Hover Color"
+msgstr ""
+
+#: src/constants/index.js:16
+msgid "Desktop"
+msgstr ""
+
+#: src/constants/index.js:25
+msgid "Tablet"
+msgstr ""
+
+#: src/constants/index.js:34
+msgid "Mobile"
+msgstr ""
+
+#: src/constants/index.js:69
+#: src/constants/index.js:138
+msgid "Center"
+msgstr ""
+
+#: src/constants/index.js:183
+#: src/controls/border-control/dimension.js:64
+#: src/controls/res-box-control/dimension.js:64
+msgid "Top"
+msgstr ""
+
+#: src/constants/index.js:204
+msgid "Middle"
+msgstr ""
+
+#: src/constants/index.js:226
+#: src/controls/border-control/dimension.js:76
+#: src/controls/res-box-control/dimension.js:88
+msgid "Bottom"
+msgstr ""
+
+#: src/constants/index.js:251
+msgid "Outset"
+msgstr ""
+
+#: src/constants/index.js:255
+msgid "Inset"
+msgstr ""
+
+#: src/constants/index.js:263
+msgid "Solid"
+msgstr ""
+
+#: src/constants/index.js:272
+msgid "Dashed"
+msgstr ""
+
+#: src/constants/index.js:281
+msgid "Dotted"
+msgstr ""
+
+#: src/constants/index.js:298
+#: src/constants/index.js:310
+msgid "Classic"
+msgstr ""
+
+#: src/constants/index.js:302
+#: src/constants/index.js:314
+#: src/controls/background-control/index.js:403
+msgid "Gradient"
+msgstr ""
+
+#: src/constants/index.js:356
+msgid "H1"
+msgstr ""
+
+#: src/constants/index.js:360
+msgid "H2"
+msgstr ""
+
+#: src/constants/index.js:364
+msgid "H3"
+msgstr ""
+
+#: src/constants/index.js:368
+msgid "H4"
+msgstr ""
+
+#: src/constants/index.js:372
+msgid "H5"
+msgstr ""
+
+#: src/constants/index.js:376
+msgid "H6"
+msgstr ""
+
+#: src/constants/index.js:380
+msgid "Div"
+msgstr ""
+
+#: src/constants/index.js:384
+msgid "P"
+msgstr ""
+
+#: src/constants/index.js:388
+msgid "Span"
+msgstr ""
+
+#: src/controls/background-control/index.js:99
+#: src/controls/background-control/index.js:283
+#: src/controls/color-control/index.js:31
+#: src/controls/colors-control/index.js:35
+#: src/controls/reset-btn/index.js:18
+msgid "Reset"
+msgstr ""
+
+#: src/controls/background-control/index.js:186
+msgid "Properties"
+msgstr ""
+
+#: src/controls/background-control/index.js:207
+msgid "Auto"
+msgstr ""
+
+#: src/controls/background-control/index.js:208
+msgid "Cover"
+msgstr ""
+
+#: src/controls/background-control/index.js:209
+msgid "Contain"
+msgstr ""
+
+#: src/controls/background-control/index.js:218
+msgid "Position"
+msgstr ""
+
+#: src/controls/background-control/index.js:221
+msgid "Left Top"
+msgstr ""
+
+#: src/controls/background-control/index.js:222
+msgid "Left Center"
+msgstr ""
+
+#: src/controls/background-control/index.js:223
+msgid "Left Bottom"
+msgstr ""
+
+#: src/controls/background-control/index.js:224
+msgid "Right Top"
+msgstr ""
+
+#: src/controls/background-control/index.js:225
+msgid "Right Center"
+msgstr ""
+
+#: src/controls/background-control/index.js:226
+msgid "Right Bottom"
+msgstr ""
+
+#: src/controls/background-control/index.js:227
+msgid "Center Top"
+msgstr ""
+
+#: src/controls/background-control/index.js:228
+msgid "Center Center"
+msgstr ""
+
+#: src/controls/background-control/index.js:229
+msgid "Center Bottom"
+msgstr ""
+
+#: src/controls/background-control/index.js:238
+#: src/controls/background-control/index.js:241
+msgid "Repeat"
+msgstr ""
+
+#: src/controls/background-control/index.js:242
+msgid "No Repeat"
+msgstr ""
+
+#: src/controls/background-control/index.js:243
+msgid "Repeat X"
+msgstr ""
+
+#: src/controls/background-control/index.js:244
+msgid "Repeat Y"
+msgstr ""
+
+#: src/controls/background-control/index.js:253
+msgid "Attachment"
+msgstr ""
+
+#: src/controls/background-control/index.js:256
+msgid "Fixed"
+msgstr ""
+
+#: src/controls/background-control/index.js:257
+msgid "Scroll"
+msgstr ""
+
+#: src/controls/background-control/index.js:266
+msgid "Enable Overlay"
+msgstr ""
+
+#: src/controls/background-control/index.js:278
+msgid "Overlay Color"
+msgstr ""
+
+#: src/controls/background-control/index.js:323
+#: src/controls/colors-control/index.js:64
+#: src/controls/colors-control/index.js:112
+msgid "Colors Palette"
+msgstr ""
+
+#: src/controls/background-control/index.js:386
+msgid "Background Image"
+msgstr ""
+
+#: src/controls/border-control/index.js:81
+msgid "Border"
+msgstr ""
+
+#: src/controls/border-control/index.js:180
+#: src/controls/border-control/index.js:224
+#: src/controls/switcher-control/index.js:11
+msgid "Normal"
+msgstr ""
+
+#: src/controls/border-control/index.js:192
+msgid "Style"
+msgstr ""
+
+#: src/controls/border-control/index.js:230
+#: src/controls/switcher-control/index.js:15
+msgid "Hover"
+msgstr ""
+
+#: src/controls/color-control/index.js:46
+msgid "Theme Colors"
+msgstr ""
+
+#: src/controls/icons-modal/index.js:10
+msgid "All Icons"
+msgstr ""
+
+#: src/controls/icons-modal/index.js:21
+msgid "Font Awesome - Regular"
+msgstr ""
+
+#: src/controls/icons-modal/index.js:45
+msgid "Font Awesome - Solid"
+msgstr ""
+
+#: src/controls/icons-modal/index.js:69
+msgid "Font Awesome - Brand"
+msgstr ""
+
+#: src/controls/icons-modal/index.js:125
+msgid "No Icons Found"
+msgstr ""
+
+#: src/controls/icons-modal/index.js:156
+msgid "Font Awesome SVG Icons"
+msgstr ""
+
+#: src/controls/link-control/index.js:63
+msgid "Open in new tab"
+msgstr ""
+
+#: src/controls/link-control/index.js:75
+msgid "Add nofollow rel"
+msgstr ""
+
+#: src/controls/link-control/index.js:87
+msgid "Add sponsored rel"
+msgstr ""
+
+#: src/controls/svg-modal/index.js:24
+msgid "SVG Preview Size"
+msgstr ""
+
+#: src/controls/svg-modal/index.js:41
+msgid "SVG Preview"
+msgstr ""
+
+#: src/controls/svg-modal/index.js:46
+msgid "Insert SVG"
+msgstr ""
+
+#: src/blocks/svg/block.json
+msgctxt "block title"
+msgid "SVG Icon"
+msgstr ""
+
+#: src/blocks/svg/block.json
+msgctxt "block description"
+msgid "Display a SVG icon"
+msgstr ""
